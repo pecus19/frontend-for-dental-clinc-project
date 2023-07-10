@@ -1,0 +1,154 @@
+<script setup>
+import {deleteCookie} from "@/main";
+</script>
+<template id="sign-up">
+  <h2>Log Out</h2>
+  <h3>
+    <button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Log Out</button>
+  </h3>
+  <div id="id06" class="modal">
+    <div class="modal-content animate">
+      <div class="imgcontainer">
+        <span onclick="window.location.reload();" class="close"
+              title="Close Modal">&times;</span>
+      </div>
+      <form @submit="deleteCookie('jwt')">
+        <h4><b>Do you want to log out from your account?</b></h4>
+        <div class="container">
+          <button type="submit"> Log Out</button>
+        </div>
+      </form>
+      <div class=" container
+          " style="background-color:#f1f1f1">
+        <button type="button" onclick="window.location.reload();" class="cancelbtn">Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+h2 {
+  padding-top: 20px;
+  padding-left: 100px;
+}
+
+h3 {
+  padding-left: 100px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: azure;
+}
+</style>

@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  dentalclinic-frontend:
+    image: bravhabit/dentalclinic-frontend:latest
+    container_name: dentalclinic-frontend
+    restart: always
+    ports:
+      - "8081:8080"
+    expose:
+      - "8080"
