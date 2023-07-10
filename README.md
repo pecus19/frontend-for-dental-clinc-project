@@ -1,8 +1,7 @@
-# iti0302-frontend
+# frontend
 
 ## Local installation guide
 ### Clone the source code
-- Clone the frontend repository (https://gitlab.cs.ttu.ee/agorbo/iti0302-frontend)
 - Check out the 'main' branch
 ### Run the application
 - Install Node.js
